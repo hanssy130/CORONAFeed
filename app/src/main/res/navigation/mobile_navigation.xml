@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="ca.bcit.coronafeed.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_all_news"
+        android:name="ca.bcit.coronafeed.ui.all_news.AllNewsFragment"
+        android:label="@string/title_all_news"
+        tools:layout="@layout/fragment_all_news" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="ca.bcit.coronafeed.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="ca.bcit.coronafeed.ui.support.SupportFragment"
+        android:label="@string/title_support"
+        tools:layout="@layout/fragment_support" />
 </navigation>

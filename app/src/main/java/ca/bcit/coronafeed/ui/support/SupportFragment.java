@@ -1,4 +1,4 @@
-package ca.bcit.coronafeed.ui.dashboard;
+package ca.bcit.coronafeed.ui.support;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import ca.bcit.coronafeed.R;
 
-public class DashboardFragment extends Fragment {
+public class SupportFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private SupportViewModel supportViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        supportViewModel =
+                ViewModelProviders.of(this).get(SupportViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_support, container, false);
+        final TextView textView = root.findViewById(R.id.text_support);
+        supportViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
