@@ -34,7 +34,7 @@ public class HomeFragment extends Fragment {
     private String TAG = HomeFragment.class.getSimpleName();
     private ListView lv;
     // URL to get contacts JSON
-    private static String SERVICE_URL = "https://gnews.io/api/v4/search?q=Canada%20COVID&token=e4e946160d6fcf714b609c3236f73641";
+    private static String SERVICE_URL = "https://gnews.io/api/v4/search?q=Canada%20COVID&token=e3255848696c17c803bee9cc6abd11c3";
     private ArrayList<Results> resultsList;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
