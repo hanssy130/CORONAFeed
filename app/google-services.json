@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "239086241380",
+    "firebase_url": "https://coronafeed-23725.firebaseio.com",
+    "project_id": "coronafeed-23725",
+    "storage_bucket": "coronafeed-23725.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239086241380:android:bc6e7b15c11a6a3f4ec171",
+        "android_client_info": {
+          "package_name": "ca.bcit.coronafeed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239086241380-amde7vt04kabuadt0t5va0uok1p4feks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfCeZYB-NxcvYkswttQqZUcwh65fotEq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239086241380-amde7vt04kabuadt0t5va0uok1p4feks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
