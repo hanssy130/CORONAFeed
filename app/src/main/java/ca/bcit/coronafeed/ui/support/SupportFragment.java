@@ -98,19 +98,18 @@ public class SupportFragment extends Fragment {
         lvBDs = root.findViewById(R.id.lvBDs);
         BDlist = new ArrayList<BenefitDescription>();
 
-        lvBDs.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                BenefitDescription benefitDescriptions = BDlist.get(position);
-                String url = benefitDescriptions.getLink();
-                Uri uri = Uri.parse(url);
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-
-
-                return false;
-            }
-        });
+//        lvBDs.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                BenefitDescription benefitDescriptions = BDlist.get(position);
+//                String url = benefitDescriptions.getLink();
+//                Uri uri = Uri.parse(url);
+//                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//                startActivity(intent);
+//
+//                return false;
+//            }
+//        });
 
 
 
@@ -164,7 +163,7 @@ public class SupportFragment extends Fragment {
         String BDTitle = title.getText().toString().trim();
         String id = databaseBenefitDescription.push().getKey();
 
-        BenefitDescription benefitDescription = new BenefitDescription(id, BDLink, BDProvince, BDTitle);
+        BenefitDescription benefitDescription = new BenefitDescription(id, BDTitle, BDLink, BDProvince);
         Task setValueTask = databaseBenefitDescription.child(id).setValue(benefitDescription);
 
         setValueTask.addOnSuccessListener(new OnSuccessListener() {

@@ -2,6 +2,8 @@ package ca.bcit.coronafeed;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,11 +44,18 @@ public class BenefitDescriptionListAdapter extends ArrayAdapter<BenefitDescripti
         TextView link = listViewItem.findViewById(R.id.link);
 
 
-        BenefitDescription benefitDescription = BDList.get(position);
+        final BenefitDescription benefitDescription = BDList.get(position);
         title.setText(benefitDescription.getTitle());
         link.setText(benefitDescription.getLink());
 
-
+        listViewItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(benefitDescription.getLink()));
+                view.getContext().startActivity(intent);
+            }
+        });
 
         return listViewItem;
     }
