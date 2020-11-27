@@ -18,6 +18,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.google.gson.Gson;
+import io.realm.Realm;
 
 import java.util.ArrayList;
 
@@ -30,7 +31,6 @@ import ca.bcit.coronafeed.ResultsAdapter;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-
     private String TAG = HomeFragment.class.getSimpleName();
     private ListView lv;
     // URL to get contacts JSON

@@ -14,4 +14,29 @@
     <string name="title_all_news">All News</string>
     <string name="title_support">Support</string>
     <string name="latestStories">Latest Stories</string>
+    <string name="provinceBtn">Filter by Province</string>
+
+    <string name="province">province</string>
+    <string name="title">title</string>
+    <string name="link">link</string>
+
+
+
+
+    <array name="provinces" >
+        <item>AB</item>
+        <item>BC</item>
+        <item>MB</item>
+        <item>NB</item>
+        <item>NL</item>
+        <item>NS</item>
+        <item>NT</item>
+        <item>NU</item>
+        <item>ON</item>
+        <item>PE</item>
+        <item>QC</item>
+        <item>SK</item>
+        <item>YT</item>
+    </array>
+
 </resources>
