@@ -16,12 +16,10 @@
     <string name="latestStories">Latest Stories</string>
     <string name="provinceBtn">Filter by Province</string>
 
-    <string name="province">province</string>
-    <string name="title">title</string>
-    <string name="link">link</string>
-
-
-
+    <string name="province">Province</string>
+    <string name="title">Title</string>
+    <string name="link">Link</string>
+    <string name="add">Add</string>
 
     <array name="provinces" >
         <item>AB</item>
