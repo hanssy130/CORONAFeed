@@ -2,64 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/supportFragment"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:layout_centerInParent="true"
-    android:layout_centerVertical="false"
-    android:layout_gravity="center"
+    tools:context=".ui.support.SupportFragment"
+    android:id="@+id/supportFragment"
     android:orientation="vertical"
+    >
 
-    tools:context=".ui.support.SupportFragment">
-
-    <EditText
-        android:id="@+id/province"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/province"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/title"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/link"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/link"
-        android:inputType="textPersonName" />
-
-    <Button
-        android:id="@+id/addBenefitDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="4dp"
-        android:gravity="center_vertical"
-        android:text="@string/add" />
 
 
     <Spinner
         android:id="@+id/provinceSelector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="4dp"
         android:entries="@array/provinces"
         tools:listitem="@layout/support_simple_spinner_dropdown_item" />
 
     <Button
         android:id="@+id/filterByProvince"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="4dp"
         android:text="@string/provinceBtn" />
 
     <ListView

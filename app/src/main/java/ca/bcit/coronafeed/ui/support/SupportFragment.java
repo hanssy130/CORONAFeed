@@ -74,19 +74,12 @@ public class SupportFragment extends Fragment {
 
         link = root.findViewById(R.id.link);
         title = root.findViewById(R.id.title);
-        province = root.findViewById(R.id.province);
-        addBenefitDescription = root.findViewById(R.id.addBenefitDescription);
+
         provinceSelector = root.findViewById(R.id.provinceSelector);
         filterByProvince = root.findViewById(R.id.filterByProvince);
 
 
-        addBenefitDescription.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addBloodPressure();
 
-            }
-        });
 
         filterByProvince.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,18 +91,21 @@ public class SupportFragment extends Fragment {
         lvBDs = root.findViewById(R.id.lvBDs);
         BDlist = new ArrayList<BenefitDescription>();
 
-//        lvBDs.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//                BenefitDescription benefitDescriptions = BDlist.get(position);
-//                String url = benefitDescriptions.getLink();
-//                Uri uri = Uri.parse(url);
-//                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-//                startActivity(intent);
-//
-//                return false;
-//            }
-//        });
+        lvBDs.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                BenefitDescription benefitDescriptions = BDlist.get(position);
+                String url = benefitDescriptions.getLink();
+                Uri uri = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
+
+                return false;
+            }
+        });
+
+
 
 
 
@@ -163,7 +159,7 @@ public class SupportFragment extends Fragment {
         String BDTitle = title.getText().toString().trim();
         String id = databaseBenefitDescription.push().getKey();
 
-        BenefitDescription benefitDescription = new BenefitDescription(id, BDTitle, BDLink, BDProvince);
+        BenefitDescription benefitDescription = new BenefitDescription(id, BDLink, BDProvince, BDTitle);
         Task setValueTask = databaseBenefitDescription.child(id).setValue(benefitDescription);
 
         setValueTask.addOnSuccessListener(new OnSuccessListener() {

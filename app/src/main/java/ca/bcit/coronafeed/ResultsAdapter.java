@@ -42,6 +42,16 @@ public class ResultsAdapter extends ArrayAdapter<Results> {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(result.getUrl()));
+                // pass in string values of json to the intent
+//                intent.putExtra("source", result.getSource().getName());
+//                intent.putExtra("author", result.getAuthor());
+//                intent.putExtra("title", result.getTitle());
+//                intent.putExtra("description", result.getDescription());
+//                intent.putExtra("url", result.getUrl());
+//                intent.putExtra("urltoimage", result.getUrlToImage());
+//                intent.putExtra("publishedat", result.getPublishedAt());
+//                intent.putExtra("content", result.getContent());
+
                 view.getContext().startActivity(intent);
             }
         });
