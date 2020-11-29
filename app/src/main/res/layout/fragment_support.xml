@@ -9,6 +9,34 @@
     android:orientation="vertical"
     >
 
+    <EditText
+        android:id="@+id/province"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/province"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/title"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/link"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/addBenefitDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add" />
 
 
     <Spinner

@@ -1,7 +1,5 @@
 package ca.bcit.coronafeed.ui.support;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -74,12 +72,19 @@ public class SupportFragment extends Fragment {
 
         link = root.findViewById(R.id.link);
         title = root.findViewById(R.id.title);
-
+        province = root.findViewById(R.id.province);
+        addBenefitDescription = root.findViewById(R.id.addBenefitDescription);
         provinceSelector = root.findViewById(R.id.provinceSelector);
         filterByProvince = root.findViewById(R.id.filterByProvince);
 
 
+        addBenefitDescription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addBloodPressure();
 
+            }
+        });
 
         filterByProvince.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,20 +95,6 @@ public class SupportFragment extends Fragment {
 
         lvBDs = root.findViewById(R.id.lvBDs);
         BDlist = new ArrayList<BenefitDescription>();
-
-        lvBDs.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                BenefitDescription benefitDescriptions = BDlist.get(position);
-                String url = benefitDescriptions.getLink();
-                Uri uri = Uri.parse(url);
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-
-
-                return false;
-            }
-        });
 
 
 
