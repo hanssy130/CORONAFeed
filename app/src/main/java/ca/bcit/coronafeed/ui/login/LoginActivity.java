@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -163,6 +164,31 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String email = usernameEditText.getText().toString().trim();
                 final String password = passwordEditText.getText().toString().trim();
+
+                if (email.isEmpty()) {
+                    usernameEditText.setError("Email is required");
+                    usernameEditText.requestFocus();
+                    return;
+                }
+
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    usernameEditText.setError("Invalid form of email.");
+                    usernameEditText.requestFocus();
+                    return;
+                }
+
+
+                if (password.isEmpty()) {
+                    passwordEditText.setError("Password is required");
+                    passwordEditText.requestFocus();
+                    return;
+                }
+
+                if (password.length() < 4) {
+                    passwordEditText.setError("Password need to be longer than 4 digits");
+                    passwordEditText.requestFocus();
+                    return;
+                }
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
